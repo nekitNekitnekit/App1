@@ -72,6 +72,11 @@ fun App() {
     val userImage = painterResource(R.drawable.user);
     val settingsImage = painterResource(R.drawable.phonelink_setup);
     val searchImage = painterResource(R.drawable.search);
+    val wifiImage = painterResource(R.drawable.wifi);
+    val connectImage = painterResource(R.drawable.devices_other);
+    val appImage = painterResource(R.drawable.apps);
+    val notificationImage = painterResource(R.drawable.notifications_none);
+    val digitalImage = painterResource(R.drawable.accessibility);
     Column(
         modifier = Modifier
             .background(Color.LightGray)
@@ -84,7 +89,7 @@ fun App() {
         ) {
             Image(
                 painter = userImage,
-                contentDescription = "Logo",
+                contentDescription = null,
                 modifier = Modifier
                     .width(51.dp)
                     .height(51.dp)
@@ -98,7 +103,8 @@ fun App() {
         ) {
             Text(
                 text = "Settings",
-                fontSize = 20.sp
+                fontSize = 36.sp,
+                lineHeight = 42.19.sp,
             )
         }
 
@@ -106,11 +112,11 @@ fun App() {
 
         SearchLine(searchImage)
 
-        SettingsElement(searchImage, "Network & Internet", "Wi-Fi, Mobile, Data using, Hotspot")
-        SettingsElement(searchImage, "Connected devices", "Bluetooth, Cast, NFC")
-        SettingsElement(searchImage, "App", "Permissions, default, apps")
-        SettingsElement(searchImage, "Notifications", "Permissions, default apps")
-        SettingsElement(searchImage, "Digital wellbeing", "Screen time, app, timer, bedtime, schedules")
+        SettingsElement(wifiImage, "Network & Internet", "Wi-Fi, Mobile, Data using, Hotspot")
+        SettingsElement(connectImage, "Connected devices", "Bluetooth, Cast, NFC")
+        SettingsElement(appImage, "App", "Permissions, default, apps")
+        SettingsElement(notificationImage, "Notifications", "Permissions, default apps")
+        SettingsElement(digitalImage, "Digital wellbeing", "Screen time, app, timer, bedtime, schedules")
     }
 }
 
@@ -129,7 +135,7 @@ fun ExploreCard(painter: Painter) {
         ) {
             Image(
                 painter = painter,
-                contentDescription = "Logo",
+                contentDescription = null,
                 modifier = Modifier
                     .width(40.dp)
                     .height(40.dp)
@@ -143,13 +149,15 @@ fun ExploreCard(painter: Painter) {
                     text = "Get to know your Pixel",
                     modifier = Modifier
                         .padding(4.dp),
-                    fontSize = 12.sp
+                    fontSize = 21.sp,
+                    lineHeight = 25.03.sp,
                 )
                 Text(
                     text = "Explore what you can do with your phone",
                     modifier = Modifier
                         .padding(4.dp),
-                    fontSize = 9.sp
+                    fontSize = 14.sp,
+                    lineHeight = 16.69.sp,
                 )
             }
         }
@@ -171,7 +179,7 @@ fun SearchLine(painter: Painter) {
         ) {
             Image(
                 painter = painter,
-                contentDescription = "Logo",
+                contentDescription = null,
                 modifier = Modifier
                     .width(40.dp)
                     .height(40.dp)
@@ -201,7 +209,7 @@ fun SettingsElement(painter: Painter, title: String, text: String) {
         ) {
             Image(
                 painter = painter,
-                contentDescription = "Logo",
+                contentDescription = null,
                 modifier = Modifier
                     .width(50.dp)
                     .height(50.dp)
@@ -215,13 +223,15 @@ fun SettingsElement(painter: Painter, title: String, text: String) {
                     text = title,
                     modifier = Modifier
                         .padding(4.dp),
-                    fontSize = 12.sp
+                    fontSize = 20.sp,
+                    lineHeight = 23.84.sp,
                 )
                 Text(
                     text = text,
                     modifier = Modifier
                         .padding(4.dp),
-                    fontSize = 8.sp
+                    fontSize = 14.sp,
+                    lineHeight = 16.69.sp,
                 )
             }
         }
