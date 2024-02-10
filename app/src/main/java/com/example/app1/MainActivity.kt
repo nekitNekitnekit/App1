@@ -156,3 +156,35 @@ fun ExploreCard(painter: Painter) {
     }
 }
 
+@Composable
+fun SearchLine(painter: Painter) {
+    Box(
+        modifier = Modifier
+            .padding(10.dp, 0.dp, 10.dp, 10.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(32.dp)
+                .background(Color.White, RoundedCornerShape(16.dp)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painter,
+                contentDescription = "Logo",
+                modifier = Modifier
+                    .width(40.dp)
+                    .height(40.dp)
+                    .padding(6.dp)
+            )
+
+            Text(
+                text = "Search settings...",
+                modifier = Modifier
+                    .padding(4.dp),
+                fontSize = 12.sp
+            )
+        }
+    }
+}
+
