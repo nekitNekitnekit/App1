@@ -93,7 +93,7 @@ fun App() {
                 modifier = Modifier
                     .width(51.dp)
                     .height(51.dp)
-                    .padding(10.dp)
+                    .clip(CircleShape)
             )
         }
 
@@ -143,7 +143,7 @@ fun ExploreCard(painter: Painter) {
             )
 
             Column(
-                verticalArrangement = Arrangement.Center
+                verticalArrangement = Arrangement.Center,
             ) {
                 Text(
                     text = "Get to know your Pixel",
