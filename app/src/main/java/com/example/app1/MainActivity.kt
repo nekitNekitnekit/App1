@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role.Companion.Image
@@ -110,6 +111,48 @@ fun App() {
         SettingsElement(searchImage, "App", "Permissions, default, apps")
         SettingsElement(searchImage, "Notifications", "Permissions, default apps")
         SettingsElement(searchImage, "Digital wellbeing", "Screen time, app, timer, bedtime, schedules")
+    }
+}
+
+@Composable
+fun ExploreCard(painter: Painter) {
+    Box(
+        modifier = Modifier
+            .padding(10.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(60.dp)
+                .background(Color.Yellow, RoundedCornerShape(16.dp)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painter,
+                contentDescription = "Logo",
+                modifier = Modifier
+                    .width(40.dp)
+                    .height(40.dp)
+                    .padding(10.dp)
+            )
+
+            Column(
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = "Get to know your Pixel",
+                    modifier = Modifier
+                        .padding(4.dp),
+                    fontSize = 12.sp
+                )
+                Text(
+                    text = "Explore what you can do with your phone",
+                    modifier = Modifier
+                        .padding(4.dp),
+                    fontSize = 9.sp
+                )
+            }
+        }
     }
 }
 
