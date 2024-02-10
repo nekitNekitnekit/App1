@@ -124,7 +124,7 @@ fun ExploreCard(painter: Painter) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(60.dp)
-                .background(Color(219, 234, 141, 1), RoundedCornerShape(16.dp)),
+                .background(Color(0xFFDBEA8D), RoundedCornerShape(16.dp)),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
